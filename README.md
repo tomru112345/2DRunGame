@@ -15,6 +15,10 @@
 
 ![プレイの様子](/img/2DRUN_Play.gif)
 
+以下のリンクからプレイできます
+
+-[2DRun](https://tomru112345.github.io/2DRunGame/)
+
 ## 参考資料
 
 - [レトロな 8 ビットゲームの制作に向けた Unity プロジェクトのセットアップ方法](https://blog.unity.com/ja/technology/2d-pixel-perfect-how-to-set-up-your-unity-project-for-retro-8-bits-games)
