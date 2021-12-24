@@ -17,7 +17,7 @@
 
 以下のリンクからプレイできます
 
--[2DRun](https://tomru112345.github.io/2DRunGame/)
+- [2DRun](https://tomru112345.github.io/2DRunGame/)
 
 ## 参考資料
 
