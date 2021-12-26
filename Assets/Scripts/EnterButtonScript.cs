@@ -16,8 +16,7 @@ public class EnterButtonScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Button StartButton = GetComponent<Button>();    // 対象のボタン
-        StartButton.animator.SetTrigger("Highlighted");
+
     }
 
     // Update is called once per frame
@@ -25,5 +24,11 @@ public class EnterButtonScript : MonoBehaviour
     {
 
 
+    }
+
+    void OnMouseEnter()
+    {
+        Button StartButton = GetComponent<Button>();    // 対象のボタン
+        StartButton.animator.SetTrigger("Highlighted");
     }
 }

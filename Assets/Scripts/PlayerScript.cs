@@ -18,7 +18,7 @@ public class PlayerScript : MonoBehaviour
     private float oldSeconds;
     //　タイマー表示用テキスト
     [SerializeField] private GameObject timerText;
-    [SerializeField] private GameObject GameOverText;
+    // [SerializeField] private GameObject GameOverText;
     [SerializeField] private GameObject QuitButton;
 
     private Animator animator;
@@ -31,7 +31,7 @@ public class PlayerScript : MonoBehaviour
         seconds = 0f;
         oldSeconds = 0f;
         timerText.GetComponent<Text>().text = minute.ToString("00") + ":" + ((int)seconds).ToString("00");
-        GameOverText.GetComponent<Text>().text = "";
+        // GameOverText.GetComponent<Text>().text = "";
         animator = gameObject.GetComponentInChildren<Animator>();
     }
 
@@ -45,7 +45,7 @@ public class PlayerScript : MonoBehaviour
             seconds = seconds - 60;
         }
         //　値が変わった時だけテキストUIを更新
-        if ((int)seconds != (int)oldSeconds && !isGameOver)
+        if ((int)seconds != (int)oldSeconds && !isGameOver && myRigidbody.transform.position.y > -1)
         {
             timerText.GetComponent<Text>().text = minute.ToString("00") + ":" + ((int)seconds).ToString("00");
         }
@@ -64,14 +64,15 @@ public class PlayerScript : MonoBehaviour
             }
         }
 
-        if (myRigidbody.transform.position.y < -1)
+        if (myRigidbody.transform.position.y < -30)
         {
             //ゲームオーバー
             isGameOver = true;
-            GameOverText.GetComponent<Text>().text = timerText.GetComponent<Text>().text;
-            GameOverText.SetActive(true);
-            timerText.SetActive(false);
-            QuitButton.SetActive(true);
+            SceneManager.LoadScene("ResultScene");
+            // GameOverText.GetComponent<Text>().text = timerText.GetComponent<Text>().text;
+            // GameOverText.SetActive(true);
+            // timerText.SetActive(false);
+            // QuitButton.SetActive(true);
         }
     }
 

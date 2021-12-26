@@ -16,13 +16,18 @@ public class QuitButtonScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Button QuitButton = GetComponent<Button>();    // 対象のボタン
-        QuitButton.animator.SetTrigger("Highlighted");
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    void OnMouseEnter()
+    {
+        Button QuitButton = GetComponent<Button>();    // 対象のボタン
+        QuitButton.animator.SetTrigger("Highlighted");
     }
 }

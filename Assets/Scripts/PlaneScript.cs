@@ -11,6 +11,7 @@ public class PlaneScript : MonoBehaviour
     float speed = 12;
     float disappear = -10;
     float respawn = 30;
+    // int dis_num = 0;
 
     // float default_y = -5;
 
@@ -32,10 +33,14 @@ public class PlaneScript : MonoBehaviour
             step[i].gameObject.transform.position -= new Vector3(speed * Time.deltaTime, 0, 0);
             if (step[i].gameObject.transform.position.x < disappear)
             {
+                // step[dis_num].SetActive(true);
                 ChangeScale(i);
                 step[i].gameObject.transform.position = new Vector3(respawn, 0, 0);
+                // dis_num = Random.Range(1, 9);
+                // step[dis_num].SetActive(false);
             }
         }
+
     }
     void ChangeScale(int i)
     {
