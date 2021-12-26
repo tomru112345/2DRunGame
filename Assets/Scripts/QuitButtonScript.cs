@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class QuitButtonScript : MonoBehaviour
 {
@@ -15,12 +16,13 @@ public class QuitButtonScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Button QuitButton = GetComponent<Button>();    // 対象のボタン
+        QuitButton.animator.SetTrigger("Highlighted");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
