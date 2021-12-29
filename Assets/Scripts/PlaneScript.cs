@@ -14,7 +14,10 @@ public class PlaneScript : MonoBehaviour
     // int dis_num = 0;
 
     // float default_y = -5;
-
+    public void addSpeed()
+    {
+        speed++;
+    }
     void Start()
     {
         for (int i = 0; i < step.Length; i++)
@@ -22,6 +25,10 @@ public class PlaneScript : MonoBehaviour
             step[i] = Instantiate(Plane, new Vector3(4 * i, 0, 0), Quaternion.identity);
             step[i].tag = "Ground";
             step[i].transform.parent = GameObject.Find("GroundList").transform;
+            if (i % 10 == 5 || i % 10 == 9 || i % 10 == 6)
+            {
+                step[i].SetActive(false);
+            }
         }
         // Instantiate(ThirdPersonCharactor, new Vector3(8, 5, 0), Quaternion.identity);
     }

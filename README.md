@@ -24,3 +24,4 @@
 - [レトロな 8 ビットゲームの制作に向けた Unity プロジェクトのセットアップ方法](https://blog.unity.com/ja/technology/2d-pixel-perfect-how-to-set-up-your-unity-project-for-retro-8-bits-games)
 - [Unityでのステージ無限生成のやり方](https://qiita.com/Sacky_0729/items/7abec77c77a6b3b0834f)
 - [Cubeを跳ねさせる](https://tsubakit1.hateblo.jp/entry/2017/07/31/005643)
+- [UIデザイナーが知っておきたいUnityの３つの機能](https://creator.game.cyberagent.co.jp/?p=4478)
